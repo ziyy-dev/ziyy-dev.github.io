@@ -1,0 +1,68 @@
+# Quick Start
+
+import Output from "@/components/Output";
+import { PackageManagerTabs } from "rspress/theme"
+
+## Installation
+
+### Rust Installation
+
+You can install Ziyy using Cargo, Rust's package manager. Open your terminal and run the following command:
+
+```bash
+cargo install ziyy
+```
+
+### Javascript Installation
+You can install Ziyy using npm, Yarn, pnpm or bun. Open your terminal and run one of the following commands:
+
+<PackageManagerTabs command="install ziyy" />
+
+### Verify Installation
+
+After installation, you can verify that Ziyy is installed correctly by running:
+
+```bash
+ziyy --version
+```
+
+This command should display the version of Ziyy you have installed.
+
+
+
+## Basic Usage
+
+To get started with Ziyy, you can create a simple Ziyy file with Ziyy tags. Here's an example:
+
+```html title="example.zy"
+<ziyy>
+  <p c="red">Hello, World!</p>
+  <p c="green">This is a green p.</p>
+  <p c="blue">And this is blue.</p>
+  <p b="true">This p is bold.</p>
+  <p i="true">This p is italic.</p>
+  <p u="true">This p is underlined.</p>
+  <p s="true">This p is strikethrough.</p>
+  <p x="yellow">This p has a yellow background.</p>
+</ziyy>
+```
+
+Then run:
+
+```bash
+ziyy example.zy
+
+```
+
+You should get the following output:
+
+<Output>
+  <span style={{ color: "#96004b" }}>Hello, World!</span>
+  <span style={{ color: "#00964b" }}>This is a green p.</span>
+  <span style={{ color: "#002696" }}>And this is blue.</span>
+  <b>This p is bold.</b>
+  <i>This p is italic.</i>
+  <u>This p is underlined.</u>
+  <s>This p is strikethrough.</s>
+  <span style={{ backgroundColor: "#969600", color: "black" }}>This p has a yellow background.</span>
+</Output>

@@ -1,0 +1,80 @@
+# Global attributes
+
+Global attributes are attributes common to all Ziyy elements; they can be used on all elements, though they may have no effect on some elements.
+
+| Attribute                                                     | Description                                           | Type              |
+| ------------------------------------------------------------- | ----------------------------------------------------- | ----------------- |
+| `class`                                                       | A space-separated list of the classes of the element. | [Class](#class)   |
+| `c \| fg`                                                     | Sets the text color.                                  | [Color](#color)   |
+| `x \| bg`                                                     | Sets the background color.                            | [Color](#color)   |
+| `b \| bold`                                                   | Causes text to be bold.                               | [Effect](#effect) |
+| `d \| dim`                                                    | Causes text to be dim.                                | [Effect](#effect) |
+| `h \| hidden \| hide \| invisible`                            | Causes text to be hidden.                             | [Effect](#effect) |
+| `k \| blink`                                                  | Causes text to blink.                                 | [Effect](#effect) |
+| `r \| invert \| reverse \| negative`                          | Inverts foreground and background colors of text.     | [Effect](#effect) |
+| `i \| italics`                                                | Causes text to be italicized.                         | [Effect](#effect) |
+| `s \| strike \| strike-through`                               | Strike through text.                                  | [Effect](#effect) |
+| `u \| under \|  underline`                                    | Underlines text.                                      | [Effect](#effect) |
+| `uu \| double-under \| double-underline`                      | Underlines text using double lines.                   | [Effect](#effect) |
+| [fixed](https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit) | Styles text with ANSI 256 color                       | [Fixed](#fixed)   |
+| `black`                                                       | Styles text with Black color                          | [Mode](#mode)     |
+| `red`                                                         | Styles text with Red color                            | [Mode](#mode)     |
+| `green`                                                       | Styles text with Green color                          | [Mode](#mode)     |
+| `yellow`                                                      | Styles text with Yellow color                         | [Mode](#mode)     |
+| `blue`                                                        | Styles text with Blue color                           | [Mode](#mode)     |
+| `magenta`                                                     | Styles text with Magenta color                        | [Mode](#mode)     |
+| `cyan`                                                        | Styles text withCyan color                            | [Mode](#mode)     |
+| `white`                                                       | Styles text with White color                          | [Mode](#mode)     |
+| [rgb](https://www.w3schools.com/colors/colors_rgb.asp)        | Styles text with Rgb color                            | [Rgb](#rgb)       |
+
+## Types of Global Attributes
+
+### `Class`
+
+The class attribute is a list of class values separated by [ASCII whitespace](https://developer.mozilla.org/en-US/docs/Glossary/Whitespace#in_html).
+
+### `Color`
+
+The attribute must take one of the following values:
+
+- `black`
+- `red`
+- `green`
+- `yellow`
+- `blue`
+- `magenta`
+- `cyan`
+- `white`
+- `fixed(<u8>)` (for 256-color support)
+- `rgb(<u8>, <u8>, <u8>)` (for RGB colors)
+- `#rrggbb` or `#rgb` (for hexadecimal colors)
+
+> [!INFO] `<u8>` is a number within the range 0 to 255
+
+### `Effect`
+
+The attribute must take one of the following values:
+
+- `true` or the empty string, indicating that the effect should be applied.
+- `false`, indicating that the effect should be cleared.
+
+### `Fixed`
+
+The fixed attribute takes a single `<u8>` value.
+
+> [!WARNING] This attribute is only available on [\<c>](elements/c.mdx) and [\<x>](elements/x.mdx) elements.
+
+### Mode
+
+The attribute must take one of the following values:
+
+- `dark` or the empty string, indicating that a darker variant of the color should be applied.
+- `light`, indicating that a lighter variant of the color should be applied.
+
+> [!WARNING] This attribute is only available on [\<c>](elements/c.mdx) and [\<x>](elements/x.mdx) elements.
+
+### `Rgb`
+
+The rgb attribute takes three `<u8>` seperated by comma (,).
+
+> [!WARNING] This attribute is only available on [\<c>](elements/c.mdx) and [\<x>](elements/x.mdx) elements.
