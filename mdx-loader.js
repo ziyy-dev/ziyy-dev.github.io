@@ -64,7 +64,7 @@ function parseArgs(args) {
  * @param {string} content
  * @returns
  */
-export default function ziyyLoader(content) {
+export default function mdxLoader(content) {
     if (/```ziyy/.test(content)) {
         const lines = content.split("\n");
         let xterm = false;
@@ -146,7 +146,7 @@ export default function ziyyLoader(content) {
             lines.unshift('import { Output } from "@/components/Output";\n');
 
         const s = lines.join("\n");
-        console.log(s);
+        // console.log(s);
         return s;
     }
     return content;

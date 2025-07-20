@@ -4,7 +4,7 @@ pageType: home
 hero:
   name: Ziyy
   # text:
-  tagline: Markup Language for styling terminals
+  tagline: Simple terminal styling
   actions:
     - theme: brand
       text: Introduction

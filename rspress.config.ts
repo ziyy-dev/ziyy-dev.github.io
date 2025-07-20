@@ -6,10 +6,8 @@ export default defineConfig({
     root: path.join(__dirname, "docs"),
     title: "Ziyy",
     icon: "/ziyy-logo.svg",
-    logo: {
-        light: "/ziyy-logo.svg",
-        dark: "/ziyy-logo.svg",
-    },
+    logo: "/ziyy-logo.svg",
+    ssg: false,
     themeConfig: {
         enableAppearanceAnimation: false,
         socialLinks: [
