@@ -1,7 +1,7 @@
 /** biome-ignore-all lint/suspicious/noControlCharactersInRegex: ignore */
-import { FitAddon } from "@xterm/addon-fit";
 import { Terminal as XTerminal } from "@xterm/xterm";
 import { useEffect, useRef } from "react";
+import { FitAddon } from "../fitAddon";
 import "@xterm/xterm/css/xterm.css";
 
 interface TerminalOptions {
@@ -38,12 +38,13 @@ export function Terminal({ id, data, source }: TerminalOptions) {
         // console.log(instance);
         if (!instance) {
             term.open(ref.current as unknown as HTMLElement);
-            fitAddon.fit();
             term.write(data);
         } else {
             term.clear();
             term.write(data);
         }
+        console.log(fitAddon.proposeDimensions());
+        fitAddon.fit();
     }, []);
 
     return (

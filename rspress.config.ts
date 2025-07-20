@@ -1,4 +1,5 @@
 import * as path from "node:path";
+import { pluginSass } from "@rsbuild/plugin-sass";
 import { defineConfig } from "rspress/config";
 
 export default defineConfig({
@@ -24,8 +25,9 @@ export default defineConfig({
             text: "📝 Edit this page on GitHub",
         },
     },
-    globalStyles: path.join(__dirname, "styles/index.css"),
+    globalStyles: path.join(__dirname, "styles/index.scss"),
     builderConfig: {
+        plugins: [pluginSass()],
         tools: {
             rspack(config) {
                 config.module.rules?.find((value) => {

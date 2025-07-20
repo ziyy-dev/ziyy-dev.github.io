@@ -30,11 +30,10 @@ You will also notice that whitespaces are collapsed, to preserve whitespace use 
 
 I say HTML-like syntax because Ziyy's syntax it is not fully compliant with HTML,
 for example there are no entity tags in Ziyy but you can use regular backslash escapes like those found in C, python, rust, javascript, etc.
-Which implies you can write regular Ansi escape codes like this `\x1b[1mThis is an \x1b[22;2mexample\x1b[22;1m text\x1b[22m`, but with some
-difference. SGR commands can't cross tag boundaries, i.e they are cleared at the closing of their parent tag. For example
+Which implies you can write regular Ansi escape codes like this `\x1b[1mThis is an \x1b[22;2mexample\x1b[22;1m text\x1b[22m`.
 
-```ziyy
-<i>Lorem <span>\x1b[1mipsum dolor sit amet \x1b[0m</span>consectetur adipiscing.
+```ziyy no-ansi
+\x1b[1mThis is an \x1b[22;2mexample\x1b[22;1m text\x1b[22m
 ```
 
 ## Why Ziyy?
@@ -51,4 +50,58 @@ It is an Arabic word that means style.
 
 What are the features of Ziyy? Lets find out
 
-🛠️ WIP
+### HTML-Like syntax
+
+Ziyy uses an HTML-like syntax so anyone with a good knowledge of HTML should find Ziyy familiar.
+
+This is BNF representation of the syntax that Ziyy uses
+
+```
+<syntax>          ::= <element> | <element> <syntax>
+<element>         ::= <text> | <opt-whitespace> | <self-close-tag> | <open-tag> <element> | <open-tag> <element> <close-tag>
+<open-tag>        ::= "<" <identifier> <whitespace> <attributes> ">"
+<close-tag>       ::= "<" "/" <identifier> ">"
+<self-close-tag>  ::= "<" <identifier> <whitespace> <attributes> "/" ">"
+<attributes>      ::= <attribute> <whitespace> <attributes> | <attribute>
+<attribute>       ::= <identifier> <opt-whitespace> "=" <opt-whitespace> <string>
+<string>          ::= '"' <text> '"' | "'" <text> "'"
+<opt-whitespace>  ::= <whitespace> <opt-whitespace> | ""
+<whitespace>      ::= " " | "\n" | "\t" | "\x0c" | "\x0d"
+```
+
+- `<text>`: Any valid UTF-8 string. Can contain [backslash escapes](#backslash-escapes).
+- `<identifier>` Must contain only ASCII upper and lowercase leters, underscores (\_), ASCII numbers,
+  and must not begin with an ASCII number. This is the regex `[_A-Za-z][_A-Za-z0-9]*`
+
+### Backslash escapes
+
+Ziyy recognizes backslash escapes. The following is a table of valid escapes in Ziyy:
+
+| Escape     | Resolved To                                          |
+| ---------- | ---------------------------------------------------- |
+| \a         | alert (BEL)                                          |
+| \b         | backspace                                            |
+| \e         | escape                                               |
+| \f         | form feed                                            |
+| \n         | new line                                             |
+| \r         | carriage return                                      |
+| \t         | horizontal tab                                       |
+| \v         | vertical tab                                         |
+| \\\\       | \\                                                   |
+| \\\<       | \<                                                   |
+| \\>        | >                                                    |
+| \0NNN      | byte with octal value NNN (1 to 3 digits)            |
+| \xHH       | byte with hexadecimal value HH (1 to 2 digits)       |
+| \uHHHH     | 16-bit Unicode character (HHHH is 1 to 4 digits)     |
+| \UHHHHHHHH | 32-bit Unicode character (HHHHHHHH is 1 to 8 digits) |
+
+### Ansi escape codes (SGR)
+
+In addition to tags Ziyy also understands Ansi escape codes (SGR).
+Ansi escape codes (SGR) can't cross tag boundaries, i.e they are cleared when their parent element closes. For example
+
+```ziyy no-ansi
+<i>Lorem <span>\x1b[1mipsum dolor sit amet \x1b[0m</span> consectetur adipiscing.</i>
+```
+
+> [!WARNING] This Feature is not fully implemented
