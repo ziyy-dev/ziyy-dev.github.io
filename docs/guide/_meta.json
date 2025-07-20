@@ -10,6 +10,7 @@
     "label": "Elements"
   },
   {
+    "type": "file",
     "name": "globals",
     "label": "Global attributes"
   }

@@ -1,1 +1,12 @@
-["introduction", "getting-started"]
+[
+  {
+    "type": "file",
+    "name": "introduction",
+    "label": "Introduction"
+  },
+  {
+    "type": "file",
+    "name": "getting-started",
+    "label": "Quick Start"
+  }
+]

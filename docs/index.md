@@ -3,8 +3,8 @@ pageType: home
 
 hero:
   name: Ziyy
-  text: Rust based terminal styler
-  tagline: style your terminal using HTML-like tags
+  # text:
+  tagline: Markup Language for styling terminals
   actions:
     - theme: brand
       text: Introduction
@@ -13,6 +13,6 @@ hero:
       text: GitHub
       link: https://github.com/ziyy-dev/
   image:
-    src: /ziyy-icon.png
+    src: /ziyy-logo.svg
     alt: Logo
 ---

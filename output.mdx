@@ -1,28 +1,53 @@
+import { Output } from "@/components/Output";
+
+> [!WARNING] Documentation is under construction 🛠️
+
 # Introduction
 
 Ziyy is a markup language that allows you to style your terminal using HTML-like syntax.
 Ziyy uses Ansi escape codes under the hood. With Ziyy you can write:
 
-```ziyy
+```html title="ziyy"
 <b>This is an <d>example</d> text</b>
 ```
 
 Instesd of:
 
-::ansi::
+```text title="ansi"
+\x1b[1mThis is an \x1b[22;2mexample\x1b[22m text\x1b[22m
+```
+
+<Output
+  data={"\u001b[1mThis is an \u001b[22;2mexample\u001b[22m text\u001b[22m"}
+/>
 
 Definitely easier on the eyes and easier to remember.
 
 You can do even more nesting:
 
-```ziyy title="ziyy" {1,2,3}
-<b>Lorem
-    <d> dolor sit
-        <b>amet consectetur
-            <d>adipiscing elit</d>
-            quisque
-        </b>faucibus ex sapien.
+```html title="ziyy" {1,2,3}
+<b
+  >Lorem
+  <d>
+    dolor sit
+    <b
+      >amet consectetur
+      <d>adipiscing elit</d>
+      quisque </b
+    >faucibus ex sapien.</d
+  ></b
+>
 ```
+
+```text title="ansi"
+\x1b[1mLorem \x1b[22;2mdolor sit \x1b[22;1mamet consectetur \x1b[22;2madipiscing elit\x1b[22m quisque \x1b[22mfaucibus ex sapien.\x1b[22m
+```
+
+<Output
+  data={
+    "\u001b[1mLorem \u001b[22;2mdolor sit \u001b[22;1mamet consectetur \u001b[22;2madipiscing elit\u001b[22m quisque \u001b[22mfaucibus ex sapien.\u001b[22m"
+  }
+/>
 
 Noticed that we left some tags unclosed? Ziyy auto closes them for you. I say auto close because Ziyy ensures
 that all styles (the ones it recognizes) defined in a document are reset at the end of a document.
@@ -33,9 +58,22 @@ for example there are no entity tags in Ziyy but you can use regular backslash e
 Which implies you can write regular Ansi escape codes like this `\x1b[1mThis is an \x1b[22;2mexample\x1b[22;1m text\x1b[22m`, but with some
 difference. SGR commands can't cross tag boundaries, i.e they are cleared at the closing of their parent tag. For example
 
-```ziyy
-<i>Lorem <span>\x1b[1mipsum dolor sit amet \x1b[0m</span>consectetur adipiscing.
+```html title="ziyy"
+<i
+  >Lorem <span>\x1b[1mipsum dolor sit amet \x1b[0m</span>consectetur
+  adipiscing.</i
+>
 ```
+
+```text title="ansi"
+\x1b[3mLorem \x1b[1mipsum dolor sit amet consectetur adipiscing.\x1b[23m
+```
+
+<Output
+  data={
+    "\u001b[3mLorem \u001b[1mipsum dolor sit amet consectetur adipiscing.\u001b[23m"
+  }
+/>
 
 ## Why Ziyy?
 

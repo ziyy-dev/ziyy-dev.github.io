@@ -4,10 +4,25 @@ The `<a>` element (or anchor element), with its href attribute, creates a hyperl
 
 Content within each `<a>` should indicate the link's destination.
 
+> [!WARNING] Styles (the ones Ziyy understands) declared within an `<a>` element are stripped off i.e. by a child tag.
+> backslash escapes are not processed. But you can declare styles on the `<a>`element.
+
 ## Example
 
-```html
-<a href="https://example.com">Visit Example</a>
+```ziyy
+<a href="https://example.com">Visit Example
+```
+
+## Example that contain a child tag
+
+```ziyy
+<a href="https://example.com">Visit Example at <c red>link
+```
+
+## Example with style
+
+```ziyy
+<a href="https://example.com" c="blue" b>Visit Example
 ```
 
 ## Attributes

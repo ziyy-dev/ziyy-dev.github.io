@@ -1,7 +1,6 @@
 # Quick Start
 
-import Output from "@/components/Output";
-import { PackageManagerTabs } from "rspress/theme"
+import { PackageManagerTabs } from "rspress/theme";
 
 ## Installation
 
@@ -14,6 +13,7 @@ cargo install ziyy
 ```
 
 ### Javascript Installation
+
 You can install Ziyy using npm, Yarn, pnpm or bun. Open your terminal and run one of the following commands:
 
 <PackageManagerTabs command="install ziyy" />
@@ -28,13 +28,11 @@ ziyy --version
 
 This command should display the version of Ziyy you have installed.
 
-
-
 ## Basic Usage
 
-To get started with Ziyy, you can create a simple Ziyy file with Ziyy tags. Here's an example:
+To get started with Ziyy, you can create a simple Ziyy document. Here's an example:
 
-```html title="example.zy"
+```ziyy no-ansi
 <ziyy>
   <p c="red">Hello, World!</p>
   <p c="green">This is a green p.</p>
@@ -50,19 +48,16 @@ To get started with Ziyy, you can create a simple Ziyy file with Ziyy tags. Here
 Then run:
 
 ```bash
-ziyy example.zy
+ziyy simple.zy
 
 ```
 
-You should get the following output:
+Or:
 
-<Output>
-  <span style={{ color: "#96004b" }}>Hello, World!</span>
-  <span style={{ color: "#00964b" }}>This is a green p.</span>
-  <span style={{ color: "#002696" }}>And this is blue.</span>
-  <b>This p is bold.</b>
-  <i>This p is italic.</i>
-  <u>This p is underlined.</u>
-  <s>This p is strikethrough.</s>
-  <span style={{ backgroundColor: "#969600", color: "black" }}>This p has a yellow background.</span>
-</Output>
+```bash
+cat simple.zy | ziyy -c
+```
+
+You should have an output similar to this:
+
+::xterm::
