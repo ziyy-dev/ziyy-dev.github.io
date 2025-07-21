@@ -941,130 +941,130 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ziyy/core-android-arm-eabi@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@ziyy/core-android-arm-eabi@npm:0.1.3"
+"@ziyy/core-android-arm-eabi@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@ziyy/core-android-arm-eabi@npm:0.1.5"
   conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
 
-"@ziyy/core-android-arm64@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@ziyy/core-android-arm64@npm:0.1.3"
+"@ziyy/core-android-arm64@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@ziyy/core-android-arm64@npm:0.1.5"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@ziyy/core-darwin-arm64@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@ziyy/core-darwin-arm64@npm:0.1.3"
+"@ziyy/core-darwin-arm64@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@ziyy/core-darwin-arm64@npm:0.1.5"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@ziyy/core-darwin-universal@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@ziyy/core-darwin-universal@npm:0.1.3"
+"@ziyy/core-darwin-universal@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@ziyy/core-darwin-universal@npm:0.1.5"
   conditions: os=darwin
   languageName: node
   linkType: hard
 
-"@ziyy/core-darwin-x64@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@ziyy/core-darwin-x64@npm:0.1.3"
+"@ziyy/core-darwin-x64@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@ziyy/core-darwin-x64@npm:0.1.5"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@ziyy/core-linux-arm-gnueabihf@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@ziyy/core-linux-arm-gnueabihf@npm:0.1.3"
+"@ziyy/core-linux-arm-gnueabihf@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@ziyy/core-linux-arm-gnueabihf@npm:0.1.5"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@ziyy/core-linux-arm-musleabihf@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@ziyy/core-linux-arm-musleabihf@npm:0.1.3"
+"@ziyy/core-linux-arm-musleabihf@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@ziyy/core-linux-arm-musleabihf@npm:0.1.5"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@ziyy/core-linux-arm64-gnu@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@ziyy/core-linux-arm64-gnu@npm:0.1.3"
+"@ziyy/core-linux-arm64-gnu@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@ziyy/core-linux-arm64-gnu@npm:0.1.5"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@ziyy/core-linux-arm64-musl@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@ziyy/core-linux-arm64-musl@npm:0.1.3"
+"@ziyy/core-linux-arm64-musl@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@ziyy/core-linux-arm64-musl@npm:0.1.5"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@ziyy/core-linux-riscv64-gnu@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@ziyy/core-linux-riscv64-gnu@npm:0.1.3"
+"@ziyy/core-linux-riscv64-gnu@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@ziyy/core-linux-riscv64-gnu@npm:0.1.5"
   conditions: os=linux & cpu=riscv64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@ziyy/core-linux-x64-gnu@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@ziyy/core-linux-x64-gnu@npm:0.1.3"
+"@ziyy/core-linux-x64-gnu@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@ziyy/core-linux-x64-gnu@npm:0.1.5"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@ziyy/core-linux-x64-musl@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@ziyy/core-linux-x64-musl@npm:0.1.3"
+"@ziyy/core-linux-x64-musl@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@ziyy/core-linux-x64-musl@npm:0.1.5"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@ziyy/core-win32-arm64-msvc@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@ziyy/core-win32-arm64-msvc@npm:0.1.3"
+"@ziyy/core-win32-arm64-msvc@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@ziyy/core-win32-arm64-msvc@npm:0.1.5"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@ziyy/core-win32-ia32-msvc@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@ziyy/core-win32-ia32-msvc@npm:0.1.3"
+"@ziyy/core-win32-ia32-msvc@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@ziyy/core-win32-ia32-msvc@npm:0.1.5"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@ziyy/core-win32-x64-msvc@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@ziyy/core-win32-x64-msvc@npm:0.1.3"
+"@ziyy/core-win32-x64-msvc@npm:0.1.5":
+  version: 0.1.5
+  resolution: "@ziyy/core-win32-x64-msvc@npm:0.1.5"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@ziyy/core@npm:^0.1.2":
-  version: 0.1.3
-  resolution: "@ziyy/core@npm:0.1.3"
+"@ziyy/core@npm:^0.1.5":
+  version: 0.1.5
+  resolution: "@ziyy/core@npm:0.1.5"
   dependencies:
-    "@ziyy/core-android-arm-eabi": "npm:0.1.3"
-    "@ziyy/core-android-arm64": "npm:0.1.3"
-    "@ziyy/core-darwin-arm64": "npm:0.1.3"
-    "@ziyy/core-darwin-universal": "npm:0.1.3"
-    "@ziyy/core-darwin-x64": "npm:0.1.3"
-    "@ziyy/core-linux-arm-gnueabihf": "npm:0.1.3"
-    "@ziyy/core-linux-arm-musleabihf": "npm:0.1.3"
-    "@ziyy/core-linux-arm64-gnu": "npm:0.1.3"
-    "@ziyy/core-linux-arm64-musl": "npm:0.1.3"
-    "@ziyy/core-linux-riscv64-gnu": "npm:0.1.3"
-    "@ziyy/core-linux-x64-gnu": "npm:0.1.3"
-    "@ziyy/core-linux-x64-musl": "npm:0.1.3"
-    "@ziyy/core-win32-arm64-msvc": "npm:0.1.3"
-    "@ziyy/core-win32-ia32-msvc": "npm:0.1.3"
-    "@ziyy/core-win32-x64-msvc": "npm:0.1.3"
+    "@ziyy/core-android-arm-eabi": "npm:0.1.5"
+    "@ziyy/core-android-arm64": "npm:0.1.5"
+    "@ziyy/core-darwin-arm64": "npm:0.1.5"
+    "@ziyy/core-darwin-universal": "npm:0.1.5"
+    "@ziyy/core-darwin-x64": "npm:0.1.5"
+    "@ziyy/core-linux-arm-gnueabihf": "npm:0.1.5"
+    "@ziyy/core-linux-arm-musleabihf": "npm:0.1.5"
+    "@ziyy/core-linux-arm64-gnu": "npm:0.1.5"
+    "@ziyy/core-linux-arm64-musl": "npm:0.1.5"
+    "@ziyy/core-linux-riscv64-gnu": "npm:0.1.5"
+    "@ziyy/core-linux-x64-gnu": "npm:0.1.5"
+    "@ziyy/core-linux-x64-musl": "npm:0.1.5"
+    "@ziyy/core-win32-arm64-msvc": "npm:0.1.5"
+    "@ziyy/core-win32-ia32-msvc": "npm:0.1.5"
+    "@ziyy/core-win32-x64-msvc": "npm:0.1.5"
   dependenciesMeta:
     "@ziyy/core-android-arm-eabi":
       optional: true
@@ -1096,7 +1096,7 @@ __metadata:
       optional: true
     "@ziyy/core-win32-x64-msvc":
       optional: true
-  checksum: 10c0/dfb0793a98ec0b6dab84b9aea14f7d026a6c7920cbcf6937a428c662be8198394a6e7759099331a04d24a725d0d544d8f01c11db73aa0539863d8ed81cfb639e
+  checksum: 10c0/8fc2d1f625abf0b0db6bd9eb66f87696641fa56d1559d90c761f0bc9355cbc50e22ee066a97e79a95ef897969945ed3825daae3b627bbe3e27ce2e40d71ef0cc
   languageName: node
   linkType: hard
 
@@ -4411,16 +4411,16 @@ __metadata:
     "@xterm/xterm": "npm:^5.5.0"
     mdast-util-find-and-replace: "npm:^3.0.2"
     rspress: "npm:^2.0.0-beta.21"
-    ziyy: "npm:^2.0.2"
+    ziyy: "npm:^2.0.3"
   languageName: unknown
   linkType: soft
 
-"ziyy@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "ziyy@npm:2.0.2"
+"ziyy@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "ziyy@npm:2.0.3"
   dependencies:
-    "@ziyy/core": "npm:^0.1.2"
-  checksum: 10c0/c2c6db31b50a653c3bd9c18fcbe73588cc431326e085edf149c4b7b1320ea3d5e7de9a8b507e2e95482593a152efedf69c775298a143db522f31a0dd4bb5110e
+    "@ziyy/core": "npm:^0.1.5"
+  checksum: 10c0/ac6a6bca8894b6ad942ad294be285d3dd98f218748473b4933f0acddc125ecf66324be44fecbfdb430a748093c5d1b5275020b1c1bc5dfbe881f13ea78695695
   languageName: node
   linkType: hard
 

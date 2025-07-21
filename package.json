@@ -16,7 +16,7 @@
     "@xterm/xterm": "^5.5.0",
     "mdast-util-find-and-replace": "^3.0.2",
     "rspress": "^2.0.0-beta.21",
-    "ziyy": "^2.0.2"
+    "ziyy": "^2.0.3"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.0.6",

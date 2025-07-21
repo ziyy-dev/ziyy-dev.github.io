@@ -15,7 +15,7 @@ Definitely easier on the eyes and easier to remember.
 
 You can do even more nesting:
 
-```ziyy title="ziyy" {1,2,3}
+```ziyy title="ziyy"
 <b>Lorem
     <d> dolor sit
         <b>amet consectetur
@@ -100,8 +100,8 @@ Ziyy recognizes backslash escapes. The following is a table of valid escapes in 
 In addition to tags Ziyy also understands Ansi escape codes (SGR).
 Ansi escape codes (SGR) can't cross tag boundaries, i.e they are cleared when their parent element closes. For example
 
-```ziyy no-ansi
-<i>Lorem <span>\x1b[1mipsum dolor sit amet \x1b[0m</span> consectetur adipiscing.</i>
+```ziyy
+<i>Lorem <span>\x1b[1mipsum dolor sit amet \x1b[0m</span>consectetur adipiscing.</i>
 ```
 
 > [!WARNING] This Feature is not fully implemented
